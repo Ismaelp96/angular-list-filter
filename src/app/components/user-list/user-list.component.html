@@ -23,7 +23,7 @@
           class="list--user__item"
           (click)="onUserSlected(element)"
         >
-          {{ element.dataCadastro }}
+          {{ element.dataCadastro | date : "dd/MM/yyyy" }}
         </td>
       </ng-container>
       <ng-container matColumnDef="status">
