@@ -34,7 +34,7 @@
           class="list--user__item"
           (click)="onUserSlected(element)"
         >
-          {{ element.ativo }}
+          {{ element.ativo | status }}
         </td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
