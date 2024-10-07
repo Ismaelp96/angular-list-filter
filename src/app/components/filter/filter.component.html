@@ -9,25 +9,22 @@
             placeholder="Digite o nome"
             type="text"
             [(ngModel)]="filterOptions.name"
-            required
           />
         </mat-form-field>
       </div>
       <div class="form__date-picker">
         <mat-form-field>
           <mat-label>Data de Cadastro</mat-label>
-          <mat-date-range-input [rangePicker]="picker" required>
+          <mat-date-range-input [rangePicker]="picker">
             <input
               matStartDate
               placeholder="Data inicial"
               [(ngModel)]="filterOptions.startDate"
-              required
             />
             <input
               matEndDate
               placeholder="Data final"
               [(ngModel)]="filterOptions.endDate"
-              required
             />
           </mat-date-range-input>
           <mat-hint>dia/mês/ano - dia/mês/ano</mat-hint>
@@ -43,11 +40,7 @@
       <div class="form__status">
         <mat-form-field>
           <mat-label>Status</mat-label>
-          <mat-select
-            matNativeControl
-            required
-            [(ngModel)]="filterOptions.status"
-          >
+          <mat-select matNativeControl [(ngModel)]="filterOptions.status">
             <mat-option
               *ngFor="let status of statusList"
               [value]="status.value"

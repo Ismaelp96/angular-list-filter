@@ -2,8 +2,8 @@
   <div class="left-content">
     <div class="bottom-content">
       <app-user-list
+        [usersList]="usersListFiltered"
         (userSelected)="onUserSelected($event)"
-        [usersList]="usersList"
       ></app-user-list>
     </div>
   </div>
