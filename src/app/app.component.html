@@ -9,7 +9,7 @@
   </div>
   <div class="right-content">
     <div class="top-content">
-      <app-filter></app-filter>
+      <app-filter (onFilter)="onFilter($event)"></app-filter>
     </div>
     <app-user-datails
       [user]="userSelected"
