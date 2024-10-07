@@ -12,7 +12,7 @@
           class="list--user__item"
           (click)="onUserSlected(element)"
         >
-          {{ element.nome }}
+          {{ element.nome | dashIfEmpty }}
         </td>
       </ng-container>
       <ng-container matColumnDef="date">
@@ -23,7 +23,7 @@
           class="list--user__item"
           (click)="onUserSlected(element)"
         >
-          {{ element.dataCadastro | date : "dd/MM/yyyy" }}
+          {{ element.dataCadastro | date : "dd/MM/yyyy" | dashIfEmpty }}
         </td>
       </ng-container>
       <ng-container matColumnDef="status">
