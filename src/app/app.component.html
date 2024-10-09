@@ -1,19 +1,24 @@
 <div class="container">
-  <div class="left-content">
-    <div class="bottom-content">
+  <div class="top-content">
+    <div class="top--title">
+      <h1>Lista de cadastro</h1>
+    </div>
+    <div>
+      <app-filter (onFilter)="onFilter($event)"></app-filter>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="left-content">
       <app-user-list
         [usersList]="usersListFiltered"
         (userSelected)="onUserSelected($event)"
       ></app-user-list>
     </div>
-  </div>
-  <div class="right-content">
-    <div class="top-content">
-      <app-filter (onFilter)="onFilter($event)"></app-filter>
+    <div class="right-content">
+      <app-user-datails
+        [user]="userSelected"
+        *ngIf="showUserDetails"
+      ></app-user-datails>
     </div>
-    <app-user-datails
-      [user]="userSelected"
-      *ngIf="showUserDetails"
-    ></app-user-datails>
   </div>
 </div>
